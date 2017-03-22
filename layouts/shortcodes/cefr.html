@@ -1,0 +1,56 @@
+<style type="text/css">
+.cefrcontainer { width: 480px; }
+.cefrtable {
+  display: table;
+  width: 100%;
+}
+.cefrrow {
+  display: table-row;
+  width: 100%;
+}
+.cefrcell {
+  display: table-cell;
+  border: 1px solid #cccccc;
+  padding: 4px;
+  text-align: center;
+}
+.cefrheader {
+  font-weight: bold;
+}
+#cefrr1c1 { width: 34%; }
+#cefrr1c2 { width: 46%; }
+#cefrr1c3 { width: 20%; }
+#cefrr2c12 { width: 17%; }
+#cefrr2c34 { width: 23%; }
+#cefrr2c5 { width: 20%; }
+</style>
+
+<div class='cefrcontainer'>
+
+<div class='cefrtable'>
+  <div class='cefrrow'>
+    <div class='cefrcell cefrheader' id='cefrr1c1'>Comprensione</div>
+    <div class='cefrcell cefrheader' id='cefrr1c2'>Parlato</div>
+    <div class='cefrcell cefrheader' id='cefrr1c3'>Scritto</div>
+  </div>
+</div>
+<div class='cefrtable'>
+  <div class='cefrrow'>
+    <div class='cefrcell' id='cefrr2c12'>Ascolto</div>
+    <div class='cefrcell' id='cefrr2c12'>Lettura</div>
+    <div class='cefrcell' id='cefrr2c34'>Interazione</div>
+    <div class='cefrcell' id='cefrr2c34'>Produzione orale</div>
+    <div class='cefrcell' id='cefrr2c5'></div>
+  </div>
+</div>
+<div class='cefrtable'>
+  <div class='cefrrow'>
+    <div class='cefrcell' id='cefrr2c12'>{{ index .Params 0 }}</div>
+    <div class='cefrcell' id='cefrr2c12'>{{ index .Params 1 }}</div>
+    <div class='cefrcell' id='cefrr2c34'>{{ index .Params 2 }}</div>
+    <div class='cefrcell' id='cefrr2c34'>{{ index .Params 3 }}</div>
+    <div class='cefrcell' id='cefrr2c5'>{{ index .Params 4 }}</div>
+  </div>
+</div>
+
+</div>
