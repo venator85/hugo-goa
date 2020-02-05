@@ -112,6 +112,7 @@ These settings to display your social accounts.
 - `twitter`: Your [Twitter](https://twitter.com) username.
 - `facebook`: Your [Facebook](https://www.facebook.com) username.
 - `google`: Your [Google](https://www.google.com) username.
+- `googlescholar`: Your [Google Scholar](https://scholar.google.com) account ID. [How to get this ID](#google-scholar)
 - `medium`: Your [Medium](https://medium.com) username.
 - `devto`: Your [dev.to](https://dev.to) username.
 - `stackoverflow`: Your [StackOverflow](https://stackoverflow.com) username.
@@ -132,16 +133,22 @@ These settings to display your social accounts.
 - `snapchat`: Your [Snapchat](https://snapchat.com) username.
 - `keybase`: Your [Keybase](https://keybase.io) username.
 - `twitch`: Your [Twitch](https://twitch.tv) username.
-- `youtube`: Your [YouTube](https://youtube.com) username.
+- `youtube`: Your [YouTube](https://youtube.com) channel ID.
 - `soundcloud`: Your [Soundcloud](https://soundcloud.com) username.
 - `tumblr`: Your [Tumblr](https://tumblr.com) username.
 - `strava`: Your [Strava](https://strava.com) username.
 - `skype`: Your [skype](https://skype.com) username.
 - `telegram`: Your [Telegram](https://telegram.com) username.
-- `whatsapp`: Your phone number.* Follow the steps [here](https://faq.whatsapp.com/en/26000030/).
-- `email`: Your email.*
+- `whatsapp`: Your phone number. Follow the steps [here](https://faq.whatsapp.com/en/26000030/). [Privacy Warning](#privacy-warning)
+- `email`: Your email. [Privacy Warning](#privacy-warning)
+- `pgp`: Your PGP key. The value should be set to the key fingerprint, and the public key should pe placed in static/key_fingerprint.txt
 
-* `WARNING`: It is recommended to keep your private data (phone number/ email) private. Especially if you don't use them for business. Adding it to your public will expose your data to the public. This is irreversabile.
+#### Privacy Warning
+It is recommended to keep your private data (phone number/ email) private. Especially if you don't use them for business. Adding it to your public will expose your data to the public. This is irreversible.
+
+#### Account Details
+##### Google Scholar
+To get this ID, go to Google Scholar, press the "My Profile" tab at the top, then copy the text after the `user=` till the first subsequent `&` (e.g. the `ACCOUNT_ID` part in `https://scholar.google.com/citations?user=ACCOUNT_ID&hl=en`).
 
 ### Extras `[params.extra]`
 
@@ -162,7 +169,7 @@ These settings for the main menu that is displayed on the home page.
 - `url`: Root URL for this section/page. eg. `/blog/`.
 
 Example:
-```
+```toml
 [[menu.main]]
     name = "blog"
     weight = 100
@@ -182,8 +189,8 @@ Example:
 * Responsive
 * Minimalist
 * Bootstrap 3
-* Fontawesome
-* HighlighJS
+* Font Awesome
+* HighlightJS
 * Disqus support for commenting
 * Built-in support for 404 pages, Disqus comments and Google Analytics.
 
@@ -230,10 +237,10 @@ Example:
 
 The theme's design was inspired by many blogs and themes:
 
-1. Bruno de Carvalho's [blog](https://biasedbit.com).
+1. Bruno de Carvalho's [blog](http://biasedbit.com).
 2. [Hugo Cocoa](https://themes.gohugo.io/cocoa/).
 3. [Hugo Vec](https://themes.gohugo.io/hugo-theme-vec/).
-4. [Hugo Agency](https://themes.gohugo.io/hugo-agency/).
+4. [Hugo Agency](https://themes.gohugo.io/agency/).
 
 ## License
 

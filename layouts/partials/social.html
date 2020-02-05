@@ -19,6 +19,12 @@
   {{ with .Site.Params.social.stackoverflow }}
   <a href="https://stackoverflow.com/users/{{.}}" aria-label="StackOverflow" target="_blank"><i class="fab fa-stack-overflow" aria-hidden="true"></i></a>
   {{ end }}
+  {{ with .Site.Params.social.googlescholar}}
+  <a href="https://scholar.google.com/citations?user={{.}}" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+  {{ end }}
+  {{ with .Site.Params.social.goodreads }}
+  <a href="https://www.goodreads.com/{{.}}" aria-label="Goodreads" target="_blank"><i class="fab fa-goodreads" aria-hidden="true"></i></a>
+  {{ end }}
   {{ with .Site.Params.social.googleplay }}
   <a href="https://play.google.com/store/apps/developer?id={{.}}" aria-label="Google Play" target="_blank"><i class="fab fa-android" aria-hidden="true"></i></a>
   {{ end }}  
@@ -83,7 +89,7 @@
   <a href="https://snapchat.com/add/{{.}}" aria-label="Snapchat" target="_blank"><i class="fab fa-snapchat" aria-hidden="true"></i></a>
   {{ end }}
   {{ with .Site.Params.social.youtube}}
-  <a href="https://youtube.com/user/{{.}}" aria-label="Youtube" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+  <a href="https://youtube.com/channel/{{.}}" aria-label="Youtube" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
   {{ end }}
   {{ with .Site.Params.social.keybase}}
   <a href="https://keybase.io/{{.}}" aria-label="Keybase" target="_blank"><i class="fab fa-keybase" aria-hidden="true"></i></a>
@@ -112,6 +118,9 @@
   {{ with .Site.Params.social.email }}
   <a href="mailto:{{.}}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
   {{ end }}
+  {{ with .Site.Params.social.pgp }}
+  <a href="/{{.}}.txt" aria-label="PGP" name="{{.}}"><i class="fas fa-key" aria-hidden="true"></i></a>
+  {{ end }}
   {{ if and ( .Site.Params.extra.rss ) ( .RSSLink ) }}
   <a href="{{ .RSSLink }}" aria-label="RSS" target="_blank"><i class="fas fa-rss" aria-hidden="true"></i></a>
   {{ end }}
@@ -126,6 +135,7 @@
   "sameAs": [
     {{ with .Site.Params.social.twitter }}"https://twitter.com/{{.}}",{{ end }}
     {{ with .Site.Params.social.google }}"https://plus.google.com/{{.}}/about",{{ end }}
+    {{ with .Site.Params.social.googlescholar}}"https://scholar.google.com/citations?user={{.}}"{{ end }}
     {{ with .Site.Params.social.goodreads }}"https://www.goodreads.com/user/show/{{.}}",{{ end }}
     {{ with .Site.Params.social.lastfm }}"https://www.last.fm/user/{{.}}/",{{ end }}
     {{ with .Site.Params.social.facebook }}"https://facebook.com/{{.}}",{{ end }}
